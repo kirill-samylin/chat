@@ -78,7 +78,7 @@ function App() {
   }
 
   function deleteForm(id) {
-    window.location.replace("/");
+    window.location.replace(`/${currentChat[0]?.link}`);
     server.current.emit('deleteChat', {
       userId: currentUser.id,
       chatId: id

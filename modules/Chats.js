@@ -77,9 +77,10 @@ module.exports.chats = function(msg) {
 
   //Удаляем чат
   this.deleteChat = (chatId, userId, cb) => {
+    console.log(chatId, userId)
     const chat = this.findChat(chatId);
     if (chat.admin===userId) {
-      this.chats = this.chats.filter((item) => item.admin!==userId && item.id!==chatId);
+      this.chats = this.chats.filter((item) => item.id!==chatId);
       cb();
     } else if (this.checkChatUsers(chat.users, userId)) {
       this.chats.find((item) => item.id===chatId).users = chat.users.filter((user) => user.id!==userId);
