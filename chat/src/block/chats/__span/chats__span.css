@@ -1,0 +1,8 @@
+.chats__span {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  text-overflow: ellipsis;
+  align-items: center;
+  justify-content: center;
+}

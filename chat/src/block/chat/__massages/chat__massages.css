@@ -1,0 +1,9 @@
+.chat__massages {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

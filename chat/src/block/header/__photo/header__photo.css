@@ -1,0 +1,6 @@
+.header__photo {
+  width: 60px;
+  height: 60px;
+  z-index: 0;
+  position: relative;
+}

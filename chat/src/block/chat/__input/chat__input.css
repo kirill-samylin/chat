@@ -1,0 +1,14 @@
+.chat__input {
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #40444B;
+  border: none;
+  color: white;
+  outline: none;
+  padding-left: 10px;
+  margin: 0 20px;
+}
+.chat__input:focus {
+  outline: none;
+}

@@ -1,0 +1,21 @@
+.button-close {
+  background-image: url(../../images/close.svg);
+  background-size: cover;
+  background-color: initial;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.button-close:focus {
+  outline: none;
+}
+.button-close:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+@media screen and (max-width: 375px) {
+  .button-close {
+    width: 25px;
+    height: 25px;
+  }
+}

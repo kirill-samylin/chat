@@ -1,0 +1,23 @@
+@import url(./__button/chat__button.css);
+@import url(./__communication/chat__communication.css);
+@import url(./__form/chat__form.css);
+@import url(./__header/chat__header.css);
+@import url(./__input/chat__input.css);
+@import url(./__massage/chat__massage.css);
+@import url(./__massages/chat__massages.css);
+@import url(./__nick/chat__nick.css);
+@import url(./__paragraph/chat__paragraph.css);
+@import url(./__photo/chat__photo.css);
+@import url(./__text-info/chat__text-info.css);
+@import url(./__text-massage/chat__text-massage.css);
+@import url(./__time/chat__time.css);
+@import url(./__title/chat__title.css);
+@import url(./__video/chat__video.css);
+@import url(./__visibility/chat-massage__visibility.css);
+@import url(./__you/chat__you.css);
+@import url(./__delete/chat__delete.css);
+
+.chat {
+  display: flex;
+  width: 100%;
+}

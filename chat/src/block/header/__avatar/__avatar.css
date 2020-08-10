@@ -1,0 +1,18 @@
+.header__avatar {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+.header__avatar:focus {
+  outline: none;
+}
+.header__avatar:hover .header__photo{
+  opacity: .5;
+}
+.header__avatar:hover .header__pencil{
+  display: block;
+}

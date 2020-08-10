@@ -1,0 +1,19 @@
+.chat__delete {
+  background-image: url(../../../images/delete.svg);
+  background-repeat: no-repeat;
+  background-color: initial;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-size: contain;
+  margin-left: 10px;
+}
+.chat__delete:focus {
+  outline: none;
+}
+.chat__delete:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+

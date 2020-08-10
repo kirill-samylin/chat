@@ -1,0 +1,6 @@
+.chat__header {
+  display: flex;
+  align-items: center;
+  height: 7%;
+  position: relative;
+}

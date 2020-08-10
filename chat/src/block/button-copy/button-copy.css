@@ -1,0 +1,17 @@
+.button-copy {
+  height: 28px;
+  background: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #40444B;
+  border: 1px solid gray;
+}
+.button-copy:focus {
+  outline: none;
+}
+.button-copy:hover {
+  opacity: .6;
+}

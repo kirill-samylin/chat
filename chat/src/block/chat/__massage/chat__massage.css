@@ -1,0 +1,10 @@
+.chat__massage {
+  display: flex;
+  width: 95%;
+  padding: 20px 0;
+  border-top: 1px solid gray;
+  margin: 0 auto;
+}
+.chat__massage:first-child {
+  border-top:none;
+}

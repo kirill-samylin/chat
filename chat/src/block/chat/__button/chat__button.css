@@ -1,0 +1,18 @@
+.chat__button {
+  margin: 0 20px;
+  height: 30px;
+  background-color: #40444B;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+}
+.chat__button:focus {
+  outline: none;
+}
+.chat__button:hover {
+  opacity: .6;
+}

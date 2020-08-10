@@ -1,0 +1,23 @@
+.button-stream {
+  height: 28px;
+  background: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #40444B;
+  border: 1px solid gray;
+  background-image: url(../../images/on.png);
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-position-x: 38px;
+  background-position-y: 8px;
+  padding-right: 25px;
+}
+.button-stream:focus {
+  outline: none;
+}
+.button-stream:hover {
+  opacity: .6;
+}

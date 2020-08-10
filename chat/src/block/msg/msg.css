@@ -1,0 +1,29 @@
+@import url(./__title/msg__title.css);
+@import url(./__text/msg__text.css);
+.msg {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 70px;
+  z-index: 999;
+  border-radius: 15px;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media screen and (max-width: 500px) {
+  .msg {
+    max-width: 250px;
+    min-width: 150px;
+    min-height: 40px;
+  }
+}
+

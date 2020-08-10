@@ -1,0 +1,24 @@
+.chats__add-channel {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #36393F;
+  font-size: 30px;
+  line-height: 1;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  background-image: url(../../../images/plus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.chats__add-channel:hover {
+  background-color: #47B484;
+}
+.chats__add-channel:focus {
+  outline: none;
+}

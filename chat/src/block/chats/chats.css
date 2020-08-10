@@ -1,0 +1,13 @@
+@import url(./__add-channel/chats__add-channel.css);
+@import url(./__channel/chats__channel.css);
+@import url(./__channels/chats__channels.css);
+@import url(./__name/chats__name.css);
+@import url(./__span/chats__span.css);
+@import url(./__my/chats__my.css);
+.chats {
+  background-color: #202225;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
