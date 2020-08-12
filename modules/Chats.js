@@ -56,8 +56,7 @@ module.exports.chats = function(msg) {
   this.findChatsUser = (userId, cb) => {
     //получаем все чаты пользователя
     const userChats = this.chats.filter((chat) => chat.admin===userId || this.checkChatUsers(chat.users, userId));
-    //сортируем чтобы чат самого пользователя был всегда первым в списке
-    cb(userChats.sort((x,y) => (x.admin === userId ? -1 : y.admin === userId ? 1 : 0)));
+    cb(userChats);
   }
 
   //Создаем чат пользователю
@@ -77,7 +76,6 @@ module.exports.chats = function(msg) {
 
   //Удаляем чат
   this.deleteChat = (chatId, userId, cb) => {
-    console.log(chatId, userId)
     const chat = this.findChat(chatId);
     if (chat.admin===userId) {
       this.chats = this.chats.filter((item) => item.id!==chatId);

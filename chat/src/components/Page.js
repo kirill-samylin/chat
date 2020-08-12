@@ -51,6 +51,8 @@ function Page(props) {
         onEditChat={handleEditChatClick}
         onDeleteChat={handleDeleteChatClick}
         onCopy={props.onCopy}
+        firstUrl={props.firstUrl}
+        lastUrl={props.lastUrl}
       />
       </main>
       <InvitationPopup

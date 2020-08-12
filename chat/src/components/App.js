@@ -12,6 +12,8 @@ function App() {
   const [currentUser, setCurrentUser] = React.useState({});
   const [currentChat, setCurrentChat] = React.useState([]);
   const [statusPage, setStatusPage] = React.useState(false);
+  const [firstUrl, setFirstUrl] = React.useState('/');
+  const [lastUrl, setLastUrl] = React.useState('/');
   const [massage, setMassage] = React.useState({
     hidden: null,
     title: '',
@@ -78,7 +80,8 @@ function App() {
   }
 
   function deleteForm(id) {
-    window.location.replace(`/${currentChat[0]?.link}`);
+    setFirstUrl('/'+currentChat.find(chat => chat.id === id).link);
+    setLastUrl('/'+currentChat[0].link);
     server.current.emit('deleteChat', {
       userId: currentUser.id,
       chatId: id
@@ -94,6 +97,7 @@ function App() {
   if ((window.location.pathname!=='/' && currentChat.length>0 && !currentChat.some(chat => chat.link === window.location.pathname.replace('/', '')))) {
     userConnectToChat(window.location.pathname.replace('/', ''))
   }
+
   function clickCopy(url) {
     windowMassage('msg_then', 'Save', url)
   }
@@ -126,9 +130,10 @@ function App() {
       }
     });
 
-    server.current.on('redirectHomePage', (id) => {
-      if (id===myId) {
-        window.location.replace("/");
+    server.current.on('redirectHomePage', ({userId, link}) => {
+      if (userId===myId) {
+        setFirstUrl(link);
+        setLastUrl(massageArray[0]?.link || '/');
       }
     });
 
@@ -141,6 +146,7 @@ function App() {
     server.current.on('sendUserChats', (data) => {
       if (data.user===myId) {
         massageArray = data.chats;
+        setLastUrl(massageArray[0]?.link || '/')
         setCurrentChat(data.chats);
       }
     });
@@ -168,6 +174,8 @@ function App() {
           onCopy={clickCopy}
           onCreateChat={insertChat}
           onConfirmDelete={deleteForm}
+          firstUrl={firstUrl}
+          lastUrl={lastUrl}
         /> :
         <>
           <AuthorizationPopup onInsertUser={insertUser} />

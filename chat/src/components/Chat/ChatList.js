@@ -21,7 +21,7 @@ function ChatList(props) {
             </NavLink>
           </li>
         ))}
-        {(window.location.pathname==='/') ? <Redirect from="/" to={currentChat.length>0 ? currentChat[0].link : "/"} /> : null}
+        <Redirect from={props.firstUrl} to={props.lastUrl} />
       </ul>
       <button onClick={props.onAddChat} title="Add chat" className="chats__add-channel"></button>
     </aside>

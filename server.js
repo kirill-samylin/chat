@@ -92,7 +92,10 @@ function userConnectChat({userId, linkChat}) {
       console.log('error userConnectChat')
     }
   } else {
-    io.emit('redirectHomePage', userId);
+    io.emit('redirectHomePage', {
+      userId: userId,
+      link: linkChat
+    });
   }
 }
 

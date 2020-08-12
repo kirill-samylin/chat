@@ -4,7 +4,7 @@ import ChatContent from './Chat/ChatContent';
 function Chats(props) {
   return (
     <>
-      <ChatList onAddChat={props.onAddChat}/>
+      <ChatList onAddChat={props.onAddChat} firstUrl={props.firstUrl} lastUrl={props.lastUrl}/>
       <ChatContent
         onSendMassage={props.onSendMassage}
         onEditChat={props.onEditChat}
