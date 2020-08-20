@@ -7,7 +7,6 @@ function ChatList(props) {
 
   const currentUser = React.useContext(CurrentUserContext);
   const currentChat = React.useContext(CurrentChatContext);
-
   return (
     <aside className="chats">
       <ul className="chats__channels">

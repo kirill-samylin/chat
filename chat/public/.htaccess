@@ -1,0 +1,13 @@
+ErrorDocument 404 /index.html
+
+<IfModule mod_rewrite.c>
+
+	RewriteEngine On
+	RewriteCond %{HTTPS_HOST} ^react-chat.online
+	RewriteRule (.*) https://react-chat.online/$1 [R=301,L]
+
+
+	RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\..{3,5}\ HTTP/
+	RewriteRule ^index\..{3,5}$ / [R=301,L]
+
+</IfModule>

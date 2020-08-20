@@ -103,10 +103,9 @@ function App() {
   }
 
   React.useEffect(() => {
-    server.current = io.connect("http://localhost:8000");
+    server.current = io.connect("https://react-chat.online:2083");
     let massageArray = []; //для добавления сообщения в конец
-    const myId = localStorage.getItem('idLocal');
-
+    let myId = localStorage.getItem('idLocal');
     server.current.on('sendUsersMassage', ({chatId, massage}) => {
       if (massageArray.some((chat) => (chat.id === chatId))) {
         const copyChat = massageArray.concat();
@@ -125,7 +124,7 @@ function App() {
 
     server.current.on('userConnect', (data) => {
       if (data.id===myId) {
-        document.title = `Welcome ${data.name}`;
+        document.title = `Welcome ${data.name} | React Chat`;
         setCurrentUser(data);
       }
     });
@@ -153,6 +152,7 @@ function App() {
 
     if (!myId) {
       localStorage.setItem('idLocal', getRandomIntInclusive(100000000000000, 900000000000000)); //создаем id
+      myId = localStorage.getItem('idLocal');
     }
 
     setTimeout(()=>{
@@ -189,3 +189,4 @@ function App() {
 }
 
 export default App;
+

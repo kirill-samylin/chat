@@ -22,3 +22,6 @@
 @import url(../block/msg/_error/msg_error.css);
 @import url(../block/msg/_then/msg_then.css);
 @import url(../block/popup/__active/popup__active.css);
+@import url(../block/popup/__container/_black/popup__container_black.css);
+@import url(../block/popup/__title/_black/popup__title_black.css);
+@import url(../block/popup/__input/_black/popup__input_black.css);

@@ -1,0 +1,11 @@
+.popup__title_black {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .popup__title_black {
+    font-size: 24px;
+  }
+}
